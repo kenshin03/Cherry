@@ -20,7 +20,7 @@ public class KTCoreDataStack {
         struct Singleton {
             static let instance = KTCoreDataStack()
         }
-        Singleton.instance.seedData()
+//        Singleton.instance.seedData()
         return Singleton.instance
     }
 

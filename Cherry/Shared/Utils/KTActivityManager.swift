@@ -66,7 +66,7 @@ class KTActivityManager {
         }
 
         // save to disk
-//        KTCoreDataStack.sharedInstance.saveContext()
+        KTCoreDataStack.sharedInstance.saveContext()
 
         self.resetManagerInternalState()
     }
@@ -92,7 +92,7 @@ class KTActivityManager {
     }
 
     func intializeInternalState(activity:KTPomodoroActivityModel) {
-        self.currentPomo = 0;
+        self.currentPomo = 1;
         self.breakElapsed = 0;
 
         activity.current_pomo = 0;
@@ -121,7 +121,6 @@ class KTActivityManager {
         }
         return nil
     }
-    // ⌚️📱
 
     func updateSharedActiveActivityStateFromModel(activeActivity:KTPomodoroActivityModel) {
 
@@ -149,9 +148,7 @@ class KTActivityManager {
         } else {
             KTSharedUserDefaults.sharedUserDefaults.removeObjectForKey("ActiveActivity")
         }
-
         KTSharedUserDefaults.sharedUserDefaults.synchronize()
-
     }
 
     func createActiveActivityFromModel(activeActivity:KTPomodoroActivityModel) -> KTActiveActivityState {
@@ -169,13 +166,14 @@ class KTActivityManager {
 
     func scheduleTimerInRunLoop(timer:NSTimer) {
         NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
-
     }
 
     // MARK - timers helper methods
 
     @objc func activityTimerFired() {
         // increment current pomo elapsed time
+        self.activity?.current_pomo = self.currentPomo!;
+
         var currentPomoElapsed = 0
         if let elapsed = self.activity?.current_pomo_elapsed_time.integerValue {
             currentPomoElapsed = elapsed + 1
@@ -208,16 +206,21 @@ class KTActivityManager {
 
     // MARK: breakTimerFired: helper methods
     func startNextPomo() {
-        self.currentPomo!++;
+        println("starting next pomo")
+
+        self.activity?.current_pomo = self.currentPomo!;
         self.activity?.current_pomo_elapsed_time = 0;
+        // restart the timer
+        self.activityTimer = NSTimer(timeInterval: 1, target: self, selector: Selector("activityTimerFired"), userInfo: nil, repeats: true)
+
         self.scheduleTimerInRunLoop(self.activityTimer!)
     }
 
     // MARK: activityTimerFired: helper methods
     func handlePomoEnded() {
-        self.currentPomo!++
-        self.activity?.current_pomo = self.currentPomo!
         if (self.activityHasMorePomo(self.activity)) {
+            self.currentPomo!++
+            self.activity?.current_pomo = self.currentPomo!
             self.pauseActivityStartBreak()
         } else {
             self.completeActivityOnLastPomo()
@@ -240,28 +243,23 @@ class KTActivityManager {
 
     func pauseActivityStartBreak() {
         self.activityTimer?.invalidate()
+        self.startBreakTimer()
     }
 
     func startBreakTimer() {
+        println("starting break")
         self.breakTimer?.invalidate()
         self.breakTimer = NSTimer(timeInterval: 1, target: self, selector: Selector("breakTimerFired"), userInfo: nil, repeats: true)
         self.scheduleTimerInRunLoop(self.breakTimer!)
     }
 
-
     func activityHasMorePomo(activity:KTPomodoroActivityModel?) -> Bool{
         if let activity = activity {
-            let expectedPomo = activity.expected_pomo.integerValue - 1
+            let expectedPomo = activity.expected_pomo.integerValue
             if let currentPomo = self.currentPomo {
                 return expectedPomo > currentPomo
             }
         }
         return false
     }
-
-
-
-
-
-
 }

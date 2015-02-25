@@ -9,6 +9,9 @@
 import WatchKit
 import Foundation
 
+let kActivityDetailsInterfaceControllerStatusMessageOtherActiveActivity = "Another activity is already in-progress.";
+let kActivityDetailsInterfaceControllerStatusMessageBreak = "Taking Break";
+
 
 class KTWatchActivityDetailsInterfaceController: WKInterfaceController, KTActivityManagerDelegate {
 
@@ -19,7 +22,8 @@ class KTWatchActivityDetailsInterfaceController: WKInterfaceController, KTActivi
     @IBOutlet weak var remainingPomoLabel:WKInterfaceLabel?
     @IBOutlet weak var timeLabel:WKInterfaceLabel?
     @IBOutlet weak var timerRingInterfaceGroup:WKInterfaceGroup?
-    @IBOutlet weak var errorMessageGroup:WKInterfaceGroup?
+    @IBOutlet weak var statusMessageGroup:WKInterfaceGroup?
+    @IBOutlet weak var statusMessage:WKInterfaceLabel?
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -28,6 +32,7 @@ class KTWatchActivityDetailsInterfaceController: WKInterfaceController, KTActivi
             self.activity = activity
             self.registerUserDefaultChanges()
             self.updateInterfaceWithActiveActivity()
+            self.statusMessage!.setText("Another activity is already in progress")
         }
     }
 
@@ -44,7 +49,7 @@ class KTWatchActivityDetailsInterfaceController: WKInterfaceController, KTActivi
         self.activityNameLabel!.setText(activity.name)
         self.plannedPomoLabel!.setText("\(activity.expected_pomo)")
         self.remainingPomoLabel!.setText("\(activity.expected_pomo)")
-        self.errorMessageGroup!.setHidden(true)
+        self.statusMessageGroup!.setHidden(true)
         self.clearAllMenuItems()
     }
 
@@ -73,7 +78,8 @@ class KTWatchActivityDetailsInterfaceController: WKInterfaceController, KTActivi
                 self.addMenuItemWithItemIcon(WKMenuItemIcon.Trash, title: "Delete", action: Selector("deleteActivity:"))
 
             } else {
-                self.errorMessageGroup?.setHidden(false)
+                self.statusMessage?.setText(kActivityDetailsInterfaceControllerStatusMessageOtherActiveActivity)
+                self.statusMessageGroup?.setHidden(false)
             }
         }
     }
@@ -85,7 +91,7 @@ class KTWatchActivityDetailsInterfaceController: WKInterfaceController, KTActivi
 
     // MARK - registerUserDefaultChanges helper methods
 
-    private func userDefaultsUpdated() {
+    @objc func userDefaultsUpdated() {
         // TODO: handle the case when the defaults is updated while an activity is on-going
     }
 
@@ -149,16 +155,29 @@ class KTWatchActivityDetailsInterfaceController: WKInterfaceController, KTActivi
 
     // MARK: KTActivityManagerDelegate method
     func activityManager(manager: KTActivityManager?, activityDidPauseForBreak elapsedBreakTime: Int) {
-        // do nothing for now
+
+        let displayMinutes = Int(floor(Double(elapsedBreakTime)/60.0))
+        let displaySecsString = Int(Double(elapsedBreakTime)%60.0)
+
+        self.timeLabel!.setText("\(displayMinutes):\(displaySecsString)")
+        self.statusMessage?.setText(kActivityDetailsInterfaceControllerStatusMessageBreak)
+        self.statusMessageGroup?.setHidden(false)
+
     }
 
     func activityManager(manager: KTActivityManager?, activityDidUpdate model: KTPomodoroActivityModel?) {
         if let activity = model {
             self.updateTimerBackgroundImage(activity)
+            self.statusMessageGroup?.setHidden(true)
 
             let displayMinutes = KTTimerFormatter.formatTimeIntToTwoDigitsString(KTTimerFormatter.formatPomoRemainingMinutes(activity.current_pomo_elapsed_time.integerValue))
             let displaySecsString = KTTimerFormatter.formatTimeIntToTwoDigitsString(KTTimerFormatter.formatPomoRemainingSecsInCurrentMinute(activity.current_pomo_elapsed_time.integerValue))
             self.timeLabel!.setText("\(displayMinutes):\(displaySecsString)")
+
+            let remainingPomos = activity.expected_pomo.integerValue - activity.current_pomo.integerValue
+            self.remainingPomoLabel!.setText("\(remainingPomos)")
+
+
             if activity.status == Constants.KTPomodoroActivityStatus.Completed.rawValue {
                 self.activityCompleted()
             }

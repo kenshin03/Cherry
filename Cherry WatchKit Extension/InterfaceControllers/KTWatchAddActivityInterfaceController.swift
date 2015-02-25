@@ -13,7 +13,7 @@ import Foundation
 class KTWatchAddActivityInterfaceController: WKInterfaceController {
 
     var activityName:String?
-    var expectedPomos:Int?
+    var expectedPomos:Int = 1
     @IBOutlet weak var expectedPomosLabel:WKInterfaceLabel?
     @IBOutlet weak var confirmButton:WKInterfaceButton?
     @IBOutlet weak var activityNameButton:WKInterfaceButton?
@@ -21,7 +21,6 @@ class KTWatchAddActivityInterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        self.expectedPomos = 1
     }
 
     // MARK: Action Handlers
@@ -44,7 +43,7 @@ class KTWatchAddActivityInterfaceController: WKInterfaceController {
 
     @IBAction func confirmButtonTapped() {
         if let name = self.activityName {
-            KTCoreDataStack.sharedInstance.createActivity(name, desc: "", pomos: self.expectedPomos!)
+            KTCoreDataStack.sharedInstance.createActivity(name, desc: "", pomos: self.expectedPomos)
             KTCoreDataStack.sharedInstance.saveContext()
         }
         self.dismissController()
@@ -52,9 +51,7 @@ class KTWatchAddActivityInterfaceController: WKInterfaceController {
 
     @IBAction func pomoSliderValueChanged(value:CGFloat) {
         self.expectedPomos = Int(floor(value))
-        if let pomos = self.expectedPomos {
-            self.expectedPomosLabel!.setText("\(pomos)")
-        }
+        self.expectedPomosLabel!.setText("\(self.expectedPomos)")
     }
 
 }

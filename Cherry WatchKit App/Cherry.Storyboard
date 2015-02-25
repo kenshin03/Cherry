@@ -153,9 +153,9 @@
             <objects>
                 <controller identifier="KTWatchActivityDetailsInterfaceController" id="5lo-wn-cta" customClass="KTWatchActivityDetailsInterfaceController" customModule="Cherry_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="MGB-uo-owX" userLabel="errorMessageGroup">
+                        <group width="1" alignment="left" id="MGB-uo-owX" userLabel="statusMessageGroup">
                             <items>
-                                <label alignment="center" text="Another activity is already in-progress." textAlignment="center" numberOfLines="2" id="jab-jg-RNe" userLabel="errorMessageLabel">
+                                <label alignment="center" text="Another activity is already in-progress." textAlignment="center" numberOfLines="2" id="jab-jg-RNe" userLabel="statusMessageLabel">
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="font" type="system" weight="thin" pointSize="13"/>
                                 </label>
@@ -232,9 +232,10 @@
                     </variation>
                     <connections>
                         <outlet property="activityNameLabel" destination="pOg-lB-kdI" id="oig-wu-2Ia"/>
-                        <outlet property="errorMessageGroup" destination="MGB-uo-owX" id="ydj-vZ-Qzt"/>
                         <outlet property="plannedPomoLabel" destination="EKg-5u-cRV" id="86u-be-Elm"/>
                         <outlet property="remainingPomoLabel" destination="57F-sA-ZPR" id="btG-Ve-Tzn"/>
+                        <outlet property="statusMessage" destination="jab-jg-RNe" id="arS-HG-vqr"/>
+                        <outlet property="statusMessageGroup" destination="MGB-uo-owX" id="GVp-fj-btf"/>
                         <outlet property="timeLabel" destination="32y-if-cF2" id="ICh-cL-DGo"/>
                         <outlet property="timerRingInterfaceGroup" destination="auH-oP-R5c" id="kY6-IF-LHs"/>
                     </connections>

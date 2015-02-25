@@ -23,11 +23,6 @@ class KTWatchActivitiesListInterfaceController: WKInterfaceController {
         self.setUpTable()
     }
 
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
     override func handleUserActivity(userInfo: [NSObject : AnyObject]!) {
         if let userInfo = userInfo {
             if let activityType = userInfo["type"] as? String{
@@ -60,31 +55,30 @@ class KTWatchActivitiesListInterfaceController: WKInterfaceController {
 
     private func setUpTable() {
         var activitiesCount = 0
-        if let activitiesList = KTCoreDataStack.sharedInstance.allActivities() {
+        if let activitiesList = KTCoreDataStack.sharedInstance.allActivities() as [KTPomodoroActivityModel]?{
             activitiesCount = activitiesList.count
 
-            // list rows count changed, rebuild entire table just in case
-            if (self.activitiesList?.count != activitiesList.count) {
+//            // list rows count changed, rebuild entire table just in case
+//            if (self.activitiesList?.count != activitiesList.count) {
                 self.clearTableRows()
 
                 self.createTableFromActivitiesList(activitiesList)
 
-                // add "add activity" row at the end
+//            } else {
+//                // just update rows
+//                self.updateTableFromActivitiesList(activitiesList)
+//
+//            }
+
+            // add "add activity" row at the end
+//            if (self.table.numberOfRows > 0) {
                 self.table.insertRowsAtIndexes(NSIndexSet(indexesInRange: NSMakeRange(activitiesCount, 1)), withRowType: "KTWatchAddActivityRowInterfaceController")
+//            }
 
-            } else {
-                // just update rows
-                self.updateTableFromActivitiesList(activitiesList)
 
-            }
             // update rows data
             self.activitiesList = activitiesList
-
-
-
         }
-
-
     }
 
     // MARK: setUpTable helper methods
