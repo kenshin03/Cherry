@@ -29,7 +29,6 @@ class KTWatchActivityDetailsInterfaceController: WKInterfaceController, KTActivi
             self.registerUserDefaultChanges()
             self.updateInterfaceWithActiveActivity()
         }
-
     }
 
     override func didDeactivate() {
@@ -112,9 +111,7 @@ class KTWatchActivityDetailsInterfaceController: WKInterfaceController, KTActivi
                 self.clearAllMenuItems()
                 self.addMenuItemWithItemIcon(WKMenuItemIcon.Block, title: "Interrupt", action: Selector("interruptActivity:"))
                 self.addMenuItemWithItemIcon(WKMenuItemIcon.Decline, title: "Stop", action: Selector("stopActivity:"))
-
             }
-
         }
     }
 
@@ -150,8 +147,11 @@ class KTWatchActivityDetailsInterfaceController: WKInterfaceController, KTActivi
         return KTSharedUserDefaults.shouldAutoDeleteCompletedActivites
     }
 
-
     // MARK: KTActivityManagerDelegate method
+    func activityManager(manager: KTActivityManager?, activityDidPauseForBreak elapsedBreakTime: Int) {
+        // do nothing for now
+    }
+
     func activityManager(manager: KTActivityManager?, activityDidUpdate model: KTPomodoroActivityModel?) {
         if let activity = model {
             self.updateTimerBackgroundImage(activity)
@@ -173,7 +173,6 @@ class KTWatchActivityDetailsInterfaceController: WKInterfaceController, KTActivi
             self.deleteActivity(nil)
         }
     }
-
 
     private func updateTimerBackgroundImage(activity:KTPomodoroActivityModel) {
         let elapsedSections = activity.current_pomo_elapsed_time.integerValue / ((KTSharedUserDefaults.pomoDuration*60)/12)

@@ -12,7 +12,8 @@ class KTSharedUserDefaults {
 
     class var sharedUserDefaults: NSUserDefaults {
         struct Static {
-            static let instance: NSUserDefaults = NSUserDefaults()
+            // TODO: more elegant handling
+            static let instance = NSUserDefaults(suiteName:"group.com.corgitoergosum.KTPomodoro")!
         }
         return Static.instance
     }

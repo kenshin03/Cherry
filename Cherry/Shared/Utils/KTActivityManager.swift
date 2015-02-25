@@ -10,6 +10,8 @@ import UIKit
 protocol KTActivityManagerDelegate {
     func activityManager(manager:KTActivityManager?, activityDidUpdate model:KTPomodoroActivityModel?)
 
+    func activityManager(manager:KTActivityManager?, activityDidPauseForBreak elapsedBreakTime:Int)
+
 }
 
 class KTActivityManager {
@@ -194,12 +196,21 @@ class KTActivityManager {
 
     // Swift Gotchas
     @objc func breakTimerFired() {
-        println("breakTimerFired not implemented")
-//        self.breakElapsed++
-//        if (self.breakElapsed < KTSharedUserDefaults.breakDuration*60) {
-//            // continue break
-//            // TODO: break
-//        }
+        self.breakElapsed!++
+        if (self.breakElapsed < KTSharedUserDefaults.breakDuration*60) {
+            self.delegate?.activityManager(self, activityDidPauseForBreak: self.breakElapsed!)
+        } else {
+            self.invalidateTimers()
+            self.breakElapsed = 0
+            self.startNextPomo()
+        }
+    }
+
+    // MARK: breakTimerFired: helper methods
+    func startNextPomo() {
+        self.currentPomo!++;
+        self.activity?.current_pomo_elapsed_time = 0;
+        self.scheduleTimerInRunLoop(self.activityTimer!)
     }
 
     // MARK: activityTimerFired: helper methods
@@ -219,7 +230,7 @@ class KTActivityManager {
         self.activity?.actual_pomo = self.currentPomo!
 
         // save to disk
-        
+        KTCoreDataStack.sharedInstance.saveContext()
 
         self.delegate?.activityManager(self, activityDidUpdate: self.activity)
 
