@@ -16,6 +16,8 @@
         <img src="https://raw.githubusercontent.com/kenshin03/Cherry/master/screenshot_2.png" width="266" />
     </td>
 </tr>
+</div>
+<div align="left">
 <tr>
     <td>
         <img src="https://raw.githubusercontent.com/kenshin03/Cherry/master/screenshot_3.png" width="266" />
