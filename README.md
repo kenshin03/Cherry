@@ -6,6 +6,7 @@
 
 
 ##Screenshots
+[[https://raw.githubusercontent.com/kenshin03/Cherry/master/Cherry-storyboard.png | height = 200px ]]
 
 
 ##Features
