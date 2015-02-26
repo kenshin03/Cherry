@@ -20,6 +20,7 @@
 
 ##To-Do
 
+- Fix WKInterfaceTable issue when beta 6 is released.
 - Allowing selection of theme colors.
 - Add sending of notifications on Pomo end and Activity End.
 - Test Notifications on a real device? (As of Xcode6.2beta5, Watch simulator does not support receiving local notifications)
