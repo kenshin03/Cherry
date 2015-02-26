@@ -54,31 +54,28 @@ class KTWatchActivitiesListInterfaceController: WKInterfaceController {
     }
 
     private func setUpTable() {
+
         var activitiesCount = 0
         if let activitiesList = KTCoreDataStack.sharedInstance.allActivities() as [KTPomodoroActivityModel]?{
             activitiesCount = activitiesList.count
 
-//            // list rows count changed, rebuild entire table just in case
-//            if (self.activitiesList?.count != activitiesList.count) {
+            // FIXME: there seems to be a bug with beta5. When a table is rebuilt, the cells' labels don't get set properly
+            // Workaround now is to avoid tearing down the original table, but this depends on the assumption that the number of rows has changed.
+            if (self.activitiesList?.count != activitiesList.count) {
                 self.clearTableRows()
 
                 self.createTableFromActivitiesList(activitiesList)
 
-//            } else {
-//                // just update rows
-//                self.updateTableFromActivitiesList(activitiesList)
-//
-//            }
-
-            // add "add activity" row at the end
-//            if (self.table.numberOfRows > 0) {
                 self.table.insertRowsAtIndexes(NSIndexSet(indexesInRange: NSMakeRange(activitiesCount, 1)), withRowType: "KTWatchAddActivityRowInterfaceController")
-//            }
 
+            } else {
+                // just update rows
+                self.updateTableFromActivitiesList(activitiesList)
 
-            // update rows data
+            }
+
             self.activitiesList = activitiesList
-        }
+      }
     }
 
     // MARK: setUpTable helper methods
@@ -117,7 +114,8 @@ class KTWatchActivitiesListInterfaceController: WKInterfaceController {
         for activity in activitiesList {
 
             if let rowInterfaceController = self.table.rowControllerAtIndex(i) as? KTWatchActivitiesRowInterfaceController{
-                rowInterfaceController.activityNameLabel?.setText(activity.name)
+
+                rowInterfaceController.activityNameLabel!.setText(activity.name)
                 if (activity.status == Constants.KTPomodoroActivityStatus.InProgress.rawValue) {
                     rowInterfaceController.activityStatusLabel?.setText("In Progress")
                     rowInterfaceController.activityStatusLabel?.setHidden(false)

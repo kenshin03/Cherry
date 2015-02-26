@@ -22,7 +22,7 @@
                                                             <label alignment="center" verticalAlignment="center" text="Task Name" textAlignment="center" numberOfLines="2" minimumScaleFactor="0.80000000000000004" id="Rjn-J5-Qv5">
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="font" type="system" weight="ultraLight" pointSize="15"/>
-                                                                <variation key="device=watch42mm" text="Watch cat videos"/>
+                                                                <variation key="device=watch42mm" text="Activity Name"/>
                                                             </label>
                                                             <group width="1" alignment="left" verticalAlignment="bottom" id="Kkf-o3-sgY">
                                                                 <items>
