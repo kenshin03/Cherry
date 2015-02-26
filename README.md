@@ -7,20 +7,6 @@
 
 ##Screenshots
 
-<div align="center">
-<tr>
-    <td>
-    <!--
-        <img src="https://raw.githubusercontent.com/kenshin03/KTSecretTextView/master/SecretTextView/Resources/Screenshots/KTSecretTextView-screenshot1.png" width="266" height="500" />
-        -->
-    </td>
-    <td>
-    <!--
-        <img src="https://raw.githubusercontent.com/kenshin03/KTSecretTextView/master/SecretTextView/Resources/Screenshots/KTSecretTextView-screenshot2.png" width="266" height="500" />
-        -->
-    </td>
-</tr>
-</div>
 
 ##Features
 
