@@ -32,7 +32,7 @@ class KTWatchAddActivityInterfaceController: WKInterfaceController {
             "Practice the guitar",
             "Read a book",
             "Work"], allowedInputMode: WKTextInputMode.Plain, completion:{(selectedAnswers) -> Void  in
-                if let activityName = selectedAnswers[0] as? String {
+                if let activityName = selectedAnswers?[0] as? String {
                     self.activityName = activityName
                     self.activityNameButton!.setTitle(activityName)
                     self.confirmButton!.setEnabled(true)
