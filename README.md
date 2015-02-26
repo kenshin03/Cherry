@@ -7,7 +7,7 @@
 
 
 ##Screenshots
-<div align="center">
+<div align="left">
 <tr>
     <td>
         <img src="https://raw.githubusercontent.com/kenshin03/Cherry/master/screenshot_1.png" width="266" />
@@ -16,8 +16,6 @@
         <img src="https://raw.githubusercontent.com/kenshin03/Cherry/master/screenshot_2.png" width="266" />
     </td>
 </tr>
-</div>
-<div align="center">
 <tr>
     <td>
         <img src="https://raw.githubusercontent.com/kenshin03/Cherry/master/screenshot_3.png" width="266" />
@@ -27,7 +25,7 @@
     </td>
 </tr>
 </div>
-<img src="https://raw.githubusercontent.com/kenshin03/Cherry/master/Cherry-storyboard.png" width="500">
+<img src="https://raw.githubusercontent.com/kenshin03/Cherry/master/Cherry-storyboard.png" width="600">
 
 
 ##Features
