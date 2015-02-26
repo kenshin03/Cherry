@@ -3,6 +3,7 @@
 **Cherry** is a miniscule Pomodoro Timer app designed for the   Watch. It started off as [KTPomodoro](https://github.com/kenshin03/KTPomodoro) but I decided to re-start the project in Swift once I had a firmer grasp of WatchKit's APIs and limitations. 
 
 ##Video
+<img src="https://raw.githubusercontent.com/kenshin03/Cherry/master/cherry-screencaps.gif" width="312">
 
 
 ##Screenshots
