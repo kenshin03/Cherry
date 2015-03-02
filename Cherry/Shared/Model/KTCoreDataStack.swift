@@ -20,7 +20,6 @@ public class KTCoreDataStack {
         struct Singleton {
             static let instance = KTCoreDataStack()
         }
-//        Singleton.instance.seedData()
         return Singleton.instance
     }
 
@@ -36,30 +35,6 @@ public class KTCoreDataStack {
         newActivity.created_time = NSDate()
         newActivity.activityID = NSUUID().UUIDString
         return newActivity
-    }
-
-    func seedData() {
-        if (self.allActivities()?.count == 0) {
-
-            var newActivity1 = NSEntityDescription.insertNewObjectForEntityForName("KTPomodoroActivityModel", inManagedObjectContext: self.managedObjectContext!) as KTPomodoroActivityModel;
-            newActivity1.name = "Activity 1"
-            newActivity1.desc = ""
-            newActivity1.status = Constants.KTPomodoroActivityStatus.Stopped.rawValue
-            newActivity1.expected_pomo = 1
-            newActivity1.actual_pomo = 0
-            newActivity1.created_time = NSDate()
-            newActivity1.activityID = NSUUID().UUIDString
-
-            var newActivity2 = NSEntityDescription.insertNewObjectForEntityForName("KTPomodoroActivityModel", inManagedObjectContext: self.managedObjectContext!) as KTPomodoroActivityModel;
-            newActivity2.name = "Activity 2"
-            newActivity2.desc = ""
-            newActivity2.status = Constants.KTPomodoroActivityStatus.Stopped.rawValue
-            newActivity2.expected_pomo = 1
-            newActivity2.actual_pomo = 0
-            newActivity2.created_time = NSDate()
-            newActivity2.activityID = NSUUID().UUIDString
-
-        }
     }
 
     public func deleteActivity(activity:KTPomodoroActivityModel) {
@@ -83,40 +58,6 @@ public class KTCoreDataStack {
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1] as NSURL
         }()
-
-    /*
-    lazy var managedObjectModel: NSManagedObjectModel = {
-        // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("KTPomodoroActivityModel", withExtension: "momd")!
-        let managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL)!
-        // Workaround of swift access modifier issue
-        // http://stackoverflow.com/a/26796626/1445534
-
-        // Check if we are running as test or not
-        let environment = NSProcessInfo.processInfo().environment as [String : AnyObject]
-        let isTest = (environment["XCInjectBundle"] as? String)?.pathExtension == "xctest"
-
-        // Create the module name
-        let moduleName = (isTest) ? "CherryTests" : "Cherry"
-
-        // Create a new managed object model with updated entity class names
-        var newEntities = [] as [NSEntityDescription]
-        for (_, entity) in enumerate(managedObjectModel.entities) {
-            let newEntity = entity.copy() as NSEntityDescription
-            if (moduleName == "") {
-                newEntity.managedObjectClassName = "\(entity.name)"
-            } else {
-                newEntity.managedObjectClassName = "\(moduleName).\(entity.name)"
-            }
-            newEntities.append(newEntity)
-        }
-
-        let newManagedObjectModel = NSManagedObjectModel()
-        newManagedObjectModel.entities = newEntities
-        
-        return newManagedObjectModel
-        }()
-    */
 
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8E4158411A9D1B8200E773E2 /* KTWatchActivitiesListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4158401A9D1B8200E773E2 /* KTWatchActivitiesListInterfaceController.swift */; };
 		8E8448A21A9AB16C000A549F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8448A11A9AB16C000A549F /* AppDelegate.swift */; };
-		8E8448A41A9AB16C000A549F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8448A31A9AB16C000A549F /* ViewController.swift */; };
 		8E8448A71A9AB16C000A549F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8448A51A9AB16C000A549F /* Main.storyboard */; };
 		8E8448A91A9AB16C000A549F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E8448A81A9AB16C000A549F /* Images.xcassets */; };
 		8E8448AC1A9AB16C000A549F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E8448AA1A9AB16C000A549F /* LaunchScreen.xib */; };
@@ -90,7 +89,6 @@
 		8E84489C1A9AB16C000A549F /* Cherry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cherry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8448A01A9AB16C000A549F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E8448A11A9AB16C000A549F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E8448A31A9AB16C000A549F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E8448A61A9AB16C000A549F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E8448A81A9AB16C000A549F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8E8448AB1A9AB16C000A549F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 				8E8E92051A9BFB5F00837D25 /* Cherry.entitlements */,
 				8E8448EA1A9AB329000A549F /* Shared */,
 				8E8448A11A9AB16C000A549F /* AppDelegate.swift */,
-				8E8448A31A9AB16C000A549F /* ViewController.swift */,
 				8E8448A51A9AB16C000A549F /* Main.storyboard */,
 				8E8448A81A9AB16C000A549F /* Images.xcassets */,
 				8E8448AA1A9AB16C000A549F /* LaunchScreen.xib */,
@@ -491,7 +488,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E8448A41A9AB16C000A549F /* ViewController.swift in Sources */,
 				8E8449011A9AC170000A549F /* KTPomodoroTaskConstants.swift in Sources */,
 				8E8448FB1A9ABEF4000A549F /* KTPomodoroActivityModel.xcdatamodeld in Sources */,
 				8E8448F11A9AB7D3000A549F /* KTTimerFormatter.swift in Sources */,
