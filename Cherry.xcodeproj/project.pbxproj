@@ -95,8 +95,6 @@
 		8E8448C51A9AB239000A549F /* Cherry WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Cherry WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8448C81A9AB239000A549F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E8448C91A9AB239000A549F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		8E8448CC1A9AB239000A549F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		8E8448CE1A9AB239000A549F /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		8E8448D01A9AB239000A549F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8E8448D41A9AB239000A549F /* Cherry WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cherry WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8448DA1A9AB239000A549F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -229,8 +227,6 @@
 			children = (
 				8E41583F1A9D1B0200E773E2 /* InterfaceControllers */,
 				8E8E92061A9BFB7400837D25 /* Cherry WatchKit Extension.entitlements */,
-				8E8448CC1A9AB239000A549F /* NotificationController.swift */,
-				8E8448CE1A9AB239000A549F /* GlanceController.swift */,
 				8E8448D01A9AB239000A549F /* Images.xcassets */,
 				8E8448C71A9AB239000A549F /* Supporting Files */,
 			);
@@ -585,7 +581,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenny Tang (3ZSQ9FX37R)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -627,7 +623,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenny Tang (3ZSQ9FX37R)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
