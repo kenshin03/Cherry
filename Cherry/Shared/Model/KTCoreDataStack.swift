@@ -14,6 +14,7 @@ public class KTCoreDataStack {
 
     private struct KTCoreDataStackConstants {
         static let appGroupID = "group.com.corgitoergosum.KTPomodoro"
+        static let shouldUseAppGroupsForStorage = true
     }
 
     public class var sharedInstance:KTCoreDataStack {
@@ -69,7 +70,13 @@ public class KTCoreDataStack {
         // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let containerURL = NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier(KTCoreDataStackConstants.appGroupID)?.URLByAppendingPathComponent("Cherry.sqlite")
+        var containerURL:NSURL?;
+        if (KTCoreDataStackConstants.shouldUseAppGroupsForStorage) {
+            containerURL = NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier(KTCoreDataStackConstants.appGroupID)?.URLByAppendingPathComponent("Cherry.sqlite")
+
+        } else {
+            containerURL = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Cherry.sqlite")
+        }
 
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
