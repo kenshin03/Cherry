@@ -10,12 +10,14 @@ import Foundation
 
 class KTSharedUserDefaults {
 
+
     class var sharedUserDefaults: NSUserDefaults {
         struct Static {
-            // TODO: more elegant handling
-            static let instance = NSUserDefaults(suiteName:"group.com.corgitoergosum.KTPomodoro")!
+            static let appGroupInstance = NSUserDefaults(suiteName:"group.com.corgitoergosum.KTPomodoro")!
+            static let standardUserDefaults = NSUserDefaults.standardUserDefaults()
+            static let shouldUseAppGroupsForStorage = false
         }
-        return Static.instance
+        return Static.shouldUseAppGroupsForStorage ? Static.appGroupInstance : Static.standardUserDefaults
     }
 
     class var pomoDuration: Int {
