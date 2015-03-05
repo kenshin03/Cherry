@@ -38,7 +38,7 @@
 - Provides **Glances** that show thew status of an in-progress activity. 
 - Jump straight to the WatchApp by tapping on the Glances.
 
-##How to build
+##How to build with app container support
 1. Select the Cherry project in the Xcode project navigator
 2. Update all three targets below to use your own **Team**:
 	- **Cherry** - the Cherry app for iOS
@@ -52,7 +52,7 @@ Make sure the **App Groups** section is expanded, and tap the **+** button to ad
 	- **Cherry WatchKit Extension** - `com.somegroup.KTPomodoro.watchkit`
 	- **Cherry WatchKit App** - `com.somegroup.KTPomodoro` <br/>
 	Then tap "Fix Issue" to let Xcode help you!
-6. Update **KTCoreDataStack.swift** & **KTSharedUserDefaults.swift** to use App Group ID you created.
+6. Update **KTCoreDataStack.swift** & **KTSharedUserDefaults.swift**,<br/>set **shouldUseAppGroupsForStorage** to **true**, then use **App Group** ID you created.
 7. Update **KTWatchActivitiesListInterfaceController.swift**, replace `com.corgitoergosum.KTPomodoro.select_activity` to your own **Bundle Identifier**, ex: `com.somegroup.KTPomodoro.select_activity`
 8. Select WatchKit Extension's info.plist, then change **NSExtension/NSExtensionAttributes/WKAppBundleIdentifier** to **Cherry WatchKit App**'s Bundle Identifier.
 9. Select **Product** -> **Clean**, then change Schema to **Cherry Watchkit App** and you are ready to run!
