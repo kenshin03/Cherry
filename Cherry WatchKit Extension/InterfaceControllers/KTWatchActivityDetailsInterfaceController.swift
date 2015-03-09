@@ -195,7 +195,12 @@ class KTWatchActivityDetailsInterfaceController: WKInterfaceController, KTActivi
 
     private func updateTimerBackgroundImage(activity:KTPomodoroActivityModel) {
         let elapsedSections = activity.current_pomo_elapsed_time.integerValue / ((KTSharedUserDefaults.pomoDuration*60)/12)
-        let backgroundImageString = "circles_\(elapsedSections)"
+        var backgroundImageString:String;
+        if (elapsedSections < 10) {
+            backgroundImageString = "circles_0\(elapsedSections)"
+        } else {
+            backgroundImageString = "circles_\(elapsedSections)"
+        }
         if backgroundImageString != self.currentBackgroundImageString {
             self.currentBackgroundImageString = backgroundImageString
             self.timerRingInterfaceGroup!.setBackgroundImageNamed(backgroundImageString)

@@ -42,8 +42,7 @@
       "size" : "44x44",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "AppIcon-88@2x.png",
-      "role" : "appLauncher",
+      "role" : "longLook",
       "subtype" : "42mm"
     },
     {
@@ -61,6 +60,15 @@
       "filename" : "AppIcon-98@2x-1.png",
       "role" : "quickLook",
       "subtype" : "42mm"
+    },
+    {
+      "role" : "appLauncher",
+      "size" : "44x44",
+      "idiom" : "watch",
+      "filename" : "AppIcon-88@2x.png",
+      "subtype" : "42mm",
+      "unassigned" : true,
+      "scale" : "2x"
     },
     {
       "scale" : "2x",
