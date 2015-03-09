@@ -14,7 +14,7 @@ public class KTCoreDataStack {
 
     private struct KTCoreDataStackConstants {
         static let appGroupID = "group.com.corgitoergosum.KTPomodoro"
-        static let shouldUseAppGroupsForStorage = true
+        static let shouldUseAppGroupsForStorage = false
     }
 
     public class var sharedInstance:KTCoreDataStack {

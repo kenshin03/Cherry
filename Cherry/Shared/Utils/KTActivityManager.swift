@@ -106,7 +106,7 @@ class KTActivityManager {
 
     func hasOtherActiveActivityInSharedState(ID:String) -> Bool {
         if let activity = self.activeActivityInSharedStorage() as KTActiveActivityState? {
-            return activity.activityID == ID
+            return activity.activityID != ID
         }
 
         return false
@@ -146,7 +146,8 @@ class KTActivityManager {
             KTSharedUserDefaults.sharedUserDefaults.removeObjectForKey("ActiveActivity")
 
         } else {
-            KTSharedUserDefaults.sharedUserDefaults.removeObjectForKey("ActiveActivity")
+            let encodedActivity:NSData = NSKeyedArchiver.archivedDataWithRootObject(updatedActiveActivity);
+            KTSharedUserDefaults.sharedUserDefaults.setObject(encodedActivity, forKey: "ActiveActivity")
         }
         KTSharedUserDefaults.sharedUserDefaults.synchronize()
     }
