@@ -24,11 +24,11 @@ class KTActiveActivityState: NSObject, NSCoding {
     }
 
     required init(coder aDecoder: NSCoder) {
-        activityID = aDecoder.decodeObjectForKey("activityID") as String
-        activityName = aDecoder.decodeObjectForKey("activityName") as String
-        status = aDecoder.decodeObjectForKey("status") as Int
-        currentPomo = aDecoder.decodeObjectForKey("currentPomo") as Int
-        elapsedSecs = aDecoder.decodeObjectForKey("elapsedSecs") as Int
+        activityID = aDecoder.decodeObjectForKey("activityID") as! String
+        activityName = aDecoder.decodeObjectForKey("activityName") as! String
+        status = aDecoder.decodeObjectForKey("status") as! Int
+        currentPomo = aDecoder.decodeObjectForKey("currentPomo") as! Int
+        elapsedSecs = aDecoder.decodeObjectForKey("elapsedSecs") as! Int
     }
 
      func encodeWithCoder(aCoder: NSCoder) {

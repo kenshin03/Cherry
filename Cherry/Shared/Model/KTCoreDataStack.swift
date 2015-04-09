@@ -27,7 +27,7 @@ public class KTCoreDataStack {
     // MARK - helper methods
     public func createActivity(name:String, desc:String, pomos:Int) -> KTPomodoroActivityModel? {
 
-        var newActivity = NSEntityDescription.insertNewObjectForEntityForName("KTPomodoroActivityModel", inManagedObjectContext: self.managedObjectContext!) as KTPomodoroActivityModel;
+        var newActivity = NSEntityDescription.insertNewObjectForEntityForName("KTPomodoroActivityModel", inManagedObjectContext: self.managedObjectContext!) as! KTPomodoroActivityModel;
         newActivity.name = name
         newActivity.desc = desc
         newActivity.status = Constants.KTPomodoroActivityStatus.Stopped.rawValue
@@ -49,7 +49,7 @@ public class KTCoreDataStack {
             NSSortDescriptor(key: "created_time", ascending: false),
             NSSortDescriptor(key: "status", ascending: true)
         ]
-        return self.managedObjectContext?.executeFetchRequest(request, error: nil) as [KTPomodoroActivityModel]?
+        return self.managedObjectContext?.executeFetchRequest(request, error: nil) as! [KTPomodoroActivityModel]?
     }
 
     // MARK - Core Data methods
@@ -57,7 +57,7 @@ public class KTCoreDataStack {
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.cogitoergosum.Test2" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as NSURL
+        return urls[urls.count-1] as! NSURL
         }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
