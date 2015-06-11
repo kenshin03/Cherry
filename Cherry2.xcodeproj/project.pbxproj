@@ -1,0 +1,854 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E4A5E581B28BF890018DF7E /* CHCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A5E561B28BF890018DF7E /* CHCategoryModel.swift */; };
+		8E4A5E5A1B28E72A0018DF7E /* CHActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A5E521B28BF890018DF7E /* CHActivityModel.swift */; };
+		8EB6C83F1B279D7000B6F5A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C83E1B279D7000B6F5A0 /* AppDelegate.swift */; };
+		8EB6C8411B279D7000B6F5A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C8401B279D7000B6F5A0 /* ViewController.swift */; };
+		8EB6C8441B279D7000B6F5A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB6C8421B279D7000B6F5A0 /* Main.storyboard */; };
+		8EB6C8461B279D7000B6F5A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EB6C8451B279D7000B6F5A0 /* Assets.xcassets */; };
+		8EB6C8491B279D7000B6F5A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB6C8471B279D7000B6F5A0 /* LaunchScreen.storyboard */; };
+		8EB6C8541B279D7000B6F5A0 /* Cherry2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C8531B279D7000B6F5A0 /* Cherry2Tests.swift */; };
+		8EB6C85F1B279D7000B6F5A0 /* Cherry2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C85E1B279D7000B6F5A0 /* Cherry2UITests.swift */; };
+		8EB6C8641B279D7000B6F5A0 /* Cherry2 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8EB6C8631B279D7000B6F5A0 /* Cherry2 WatchKit App.app */; };
+		8EB6C86A1B279D7000B6F5A0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB6C8681B279D7000B6F5A0 /* Interface.storyboard */; };
+		8EB6C86C1B279D7000B6F5A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EB6C86B1B279D7000B6F5A0 /* Assets.xcassets */; };
+		8EB6C8731B279D7100B6F5A0 /* Cherry2 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8EB6C8721B279D7100B6F5A0 /* Cherry2 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8EB6C87C1B279D7100B6F5A0 /* CWEExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C87B1B279D7100B6F5A0 /* CWEExtensionDelegate.swift */; };
+		8EB6C8841B279D7100B6F5A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EB6C8831B279D7100B6F5A0 /* Assets.xcassets */; };
+		8EB6C89E1B27A6A700B6F5A0 /* CWENotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C89D1B27A6A700B6F5A0 /* CWENotificationController.swift */; };
+		8EB6C8A01B27A6F700B6F5A0 /* CWEGlanceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C89F1B27A6F700B6F5A0 /* CWEGlanceInterfaceController.swift */; };
+		8EB6C8A21B27A72900B6F5A0 /* CWEComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C8A11B27A72900B6F5A0 /* CWEComplicationController.swift */; };
+		8EB6C8A51B27AA9000B6F5A0 /* Cherry2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C8A31B27AA9000B6F5A0 /* Cherry2.xcdatamodeld */; };
+		8EB6C8C81B27AB1E00B6F5A0 /* CHCCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C8C71B27AB1E00B6F5A0 /* CHCCoreDataStack.swift */; };
+		8EB6C8CB1B27AD0100B6F5A0 /* CWEActivitiesCategoryPickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C8CA1B27AD0100B6F5A0 /* CWEActivitiesCategoryPickerHelper.swift */; };
+		8EB6C8CE1B27B40600B6F5A0 /* CWEMainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C8CD1B27B40600B6F5A0 /* CWEMainInterfaceController.swift */; };
+		8EB6C8D01B27B44C00B6F5A0 /* CWEMainInterfaceRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6C8CF1B27B44C00B6F5A0 /* CWEMainInterfaceRowController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8EB6C8501B279D7000B6F5A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EB6C8331B279D7000B6F5A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EB6C83A1B279D7000B6F5A0;
+			remoteInfo = Cherry2;
+		};
+		8EB6C85B1B279D7000B6F5A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EB6C8331B279D7000B6F5A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EB6C83A1B279D7000B6F5A0;
+			remoteInfo = Cherry2;
+		};
+		8EB6C8651B279D7000B6F5A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EB6C8331B279D7000B6F5A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EB6C8621B279D7000B6F5A0;
+			remoteInfo = "Cherry2 WatchKit App";
+		};
+		8EB6C8741B279D7100B6F5A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EB6C8331B279D7000B6F5A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EB6C8711B279D7100B6F5A0;
+			remoteInfo = "Cherry2 WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8EB6C88B1B279D7100B6F5A0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8EB6C8731B279D7100B6F5A0 /* Cherry2 WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB6C88F1B279D7100B6F5A0 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				8EB6C8641B279D7000B6F5A0 /* Cherry2 WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8E4A5E511B28BF890018DF7E /* CHActivityModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CHActivityModel+CoreDataProperties.swift"; path = "Model/CHActivityModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8E4A5E521B28BF890018DF7E /* CHActivityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHActivityModel.swift; path = Model/CHActivityModel.swift; sourceTree = "<group>"; };
+		8E4A5E551B28BF890018DF7E /* CHCategoryModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CHCategoryModel+CoreDataProperties.swift"; path = "Model/CHCategoryModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8E4A5E561B28BF890018DF7E /* CHCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHCategoryModel.swift; path = Model/CHCategoryModel.swift; sourceTree = "<group>"; };
+		8EB6C83B1B279D7000B6F5A0 /* Cherry2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cherry2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB6C83E1B279D7000B6F5A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8EB6C8401B279D7000B6F5A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8EB6C8431B279D7000B6F5A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EB6C8451B279D7000B6F5A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EB6C8481B279D7000B6F5A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8EB6C84A1B279D7000B6F5A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EB6C84F1B279D7000B6F5A0 /* Cherry2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Cherry2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB6C8531B279D7000B6F5A0 /* Cherry2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cherry2Tests.swift; sourceTree = "<group>"; };
+		8EB6C8551B279D7000B6F5A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EB6C85A1B279D7000B6F5A0 /* Cherry2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Cherry2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB6C85E1B279D7000B6F5A0 /* Cherry2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cherry2UITests.swift; sourceTree = "<group>"; };
+		8EB6C8601B279D7000B6F5A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EB6C8631B279D7000B6F5A0 /* Cherry2 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cherry2 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB6C8691B279D7000B6F5A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8EB6C86B1B279D7000B6F5A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EB6C86D1B279D7000B6F5A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EB6C8721B279D7100B6F5A0 /* Cherry2 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Cherry2 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB6C8781B279D7100B6F5A0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8EB6C87B1B279D7100B6F5A0 /* CWEExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWEExtensionDelegate.swift; sourceTree = "<group>"; };
+		8EB6C8831B279D7100B6F5A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EB6C8851B279D7100B6F5A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EB6C89D1B27A6A700B6F5A0 /* CWENotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CWENotificationController.swift; path = "Interface Controllers/CWENotificationController.swift"; sourceTree = "<group>"; };
+		8EB6C89F1B27A6F700B6F5A0 /* CWEGlanceInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CWEGlanceInterfaceController.swift; path = "Interface Controllers/CWEGlanceInterfaceController.swift"; sourceTree = "<group>"; };
+		8EB6C8A11B27A72900B6F5A0 /* CWEComplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CWEComplicationController.swift; path = "Interface Controllers/CWEComplicationController.swift"; sourceTree = "<group>"; };
+		8EB6C8A41B27AA9000B6F5A0 /* Cherry2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cherry2.xcdatamodel; sourceTree = "<group>"; };
+		8EB6C8C71B27AB1E00B6F5A0 /* CHCCoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHCCoreDataStack.swift; path = Model/CHCCoreDataStack.swift; sourceTree = "<group>"; };
+		8EB6C8CA1B27AD0100B6F5A0 /* CWEActivitiesCategoryPickerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CWEActivitiesCategoryPickerHelper.swift; path = "Interface Controllers/CWEActivitiesCategoryPickerHelper.swift"; sourceTree = "<group>"; };
+		8EB6C8CD1B27B40600B6F5A0 /* CWEMainInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CWEMainInterfaceController.swift; path = "Interface Controllers/MainInterfaceController/CWEMainInterfaceController.swift"; sourceTree = "<group>"; };
+		8EB6C8CF1B27B44C00B6F5A0 /* CWEMainInterfaceRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CWEMainInterfaceRowController.swift; path = "Interface Controllers/MainInterfaceController/CWEMainInterfaceRowController.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8EB6C8381B279D7000B6F5A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB6C84C1B279D7000B6F5A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB6C8571B279D7000B6F5A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB6C86F1B279D7100B6F5A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8EB6C8321B279D7000B6F5A0 = {
+			isa = PBXGroup;
+			children = (
+				8EB6C83D1B279D7000B6F5A0 /* Cherry2 */,
+				8EB6C8521B279D7000B6F5A0 /* Cherry2Tests */,
+				8EB6C85D1B279D7000B6F5A0 /* Cherry2UITests */,
+				8EB6C8671B279D7000B6F5A0 /* Cherry2 WatchKit App */,
+				8EB6C8761B279D7100B6F5A0 /* Cherry2 WatchKit Extension */,
+				8EB6C83C1B279D7000B6F5A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8EB6C83C1B279D7000B6F5A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EB6C83B1B279D7000B6F5A0 /* Cherry2.app */,
+				8EB6C84F1B279D7000B6F5A0 /* Cherry2Tests.xctest */,
+				8EB6C85A1B279D7000B6F5A0 /* Cherry2UITests.xctest */,
+				8EB6C8631B279D7000B6F5A0 /* Cherry2 WatchKit App.app */,
+				8EB6C8721B279D7100B6F5A0 /* Cherry2 WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EB6C83D1B279D7000B6F5A0 /* Cherry2 */ = {
+			isa = PBXGroup;
+			children = (
+				8EB6C83E1B279D7000B6F5A0 /* AppDelegate.swift */,
+				8EB6C8401B279D7000B6F5A0 /* ViewController.swift */,
+				8EB6C8421B279D7000B6F5A0 /* Main.storyboard */,
+				8EB6C8451B279D7000B6F5A0 /* Assets.xcassets */,
+				8EB6C8471B279D7000B6F5A0 /* LaunchScreen.storyboard */,
+				8EB6C84A1B279D7000B6F5A0 /* Info.plist */,
+			);
+			path = Cherry2;
+			sourceTree = "<group>";
+		};
+		8EB6C8521B279D7000B6F5A0 /* Cherry2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8EB6C8531B279D7000B6F5A0 /* Cherry2Tests.swift */,
+				8EB6C8551B279D7000B6F5A0 /* Info.plist */,
+			);
+			path = Cherry2Tests;
+			sourceTree = "<group>";
+		};
+		8EB6C85D1B279D7000B6F5A0 /* Cherry2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				8EB6C85E1B279D7000B6F5A0 /* Cherry2UITests.swift */,
+				8EB6C8601B279D7000B6F5A0 /* Info.plist */,
+			);
+			path = Cherry2UITests;
+			sourceTree = "<group>";
+		};
+		8EB6C8671B279D7000B6F5A0 /* Cherry2 WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				8EB6C8681B279D7000B6F5A0 /* Interface.storyboard */,
+				8EB6C86B1B279D7000B6F5A0 /* Assets.xcassets */,
+				8EB6C86D1B279D7000B6F5A0 /* Info.plist */,
+			);
+			path = "Cherry2 WatchKit App";
+			sourceTree = "<group>";
+		};
+		8EB6C8761B279D7100B6F5A0 /* Cherry2 WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8EB6C89A1B27A42900B6F5A0 /* Model */,
+				8EB6C8991B27A41400B6F5A0 /* Interface Controllers */,
+				8EB6C87B1B279D7100B6F5A0 /* CWEExtensionDelegate.swift */,
+				8EB6C8831B279D7100B6F5A0 /* Assets.xcassets */,
+				8EB6C8851B279D7100B6F5A0 /* Info.plist */,
+				8EB6C8771B279D7100B6F5A0 /* Supporting Files */,
+			);
+			path = "Cherry2 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		8EB6C8771B279D7100B6F5A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8EB6C8781B279D7100B6F5A0 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8EB6C8991B27A41400B6F5A0 /* Interface Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8EB6C8CC1B27B38700B6F5A0 /* MainInterfaceController */,
+				8EB6C89D1B27A6A700B6F5A0 /* CWENotificationController.swift */,
+				8EB6C89F1B27A6F700B6F5A0 /* CWEGlanceInterfaceController.swift */,
+				8EB6C8A11B27A72900B6F5A0 /* CWEComplicationController.swift */,
+				8EB6C8CA1B27AD0100B6F5A0 /* CWEActivitiesCategoryPickerHelper.swift */,
+			);
+			name = "Interface Controllers";
+			sourceTree = "<group>";
+		};
+		8EB6C89A1B27A42900B6F5A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E4A5E551B28BF890018DF7E /* CHCategoryModel+CoreDataProperties.swift */,
+				8E4A5E561B28BF890018DF7E /* CHCategoryModel.swift */,
+				8E4A5E511B28BF890018DF7E /* CHActivityModel+CoreDataProperties.swift */,
+				8E4A5E521B28BF890018DF7E /* CHActivityModel.swift */,
+				8EB6C8A31B27AA9000B6F5A0 /* Cherry2.xcdatamodeld */,
+				8EB6C8C71B27AB1E00B6F5A0 /* CHCCoreDataStack.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8EB6C8CC1B27B38700B6F5A0 /* MainInterfaceController */ = {
+			isa = PBXGroup;
+			children = (
+				8EB6C8CD1B27B40600B6F5A0 /* CWEMainInterfaceController.swift */,
+				8EB6C8CF1B27B44C00B6F5A0 /* CWEMainInterfaceRowController.swift */,
+			);
+			name = MainInterfaceController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8EB6C83A1B279D7000B6F5A0 /* Cherry2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EB6C8901B279D7100B6F5A0 /* Build configuration list for PBXNativeTarget "Cherry2" */;
+			buildPhases = (
+				8EB6C8371B279D7000B6F5A0 /* Sources */,
+				8EB6C8381B279D7000B6F5A0 /* Frameworks */,
+				8EB6C8391B279D7000B6F5A0 /* Resources */,
+				8EB6C88F1B279D7100B6F5A0 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EB6C8661B279D7000B6F5A0 /* PBXTargetDependency */,
+			);
+			name = Cherry2;
+			productName = Cherry2;
+			productReference = 8EB6C83B1B279D7000B6F5A0 /* Cherry2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8EB6C84E1B279D7000B6F5A0 /* Cherry2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EB6C8931B279D7100B6F5A0 /* Build configuration list for PBXNativeTarget "Cherry2Tests" */;
+			buildPhases = (
+				8EB6C84B1B279D7000B6F5A0 /* Sources */,
+				8EB6C84C1B279D7000B6F5A0 /* Frameworks */,
+				8EB6C84D1B279D7000B6F5A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EB6C8511B279D7000B6F5A0 /* PBXTargetDependency */,
+			);
+			name = Cherry2Tests;
+			productName = Cherry2Tests;
+			productReference = 8EB6C84F1B279D7000B6F5A0 /* Cherry2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8EB6C8591B279D7000B6F5A0 /* Cherry2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EB6C8961B279D7100B6F5A0 /* Build configuration list for PBXNativeTarget "Cherry2UITests" */;
+			buildPhases = (
+				8EB6C8561B279D7000B6F5A0 /* Sources */,
+				8EB6C8571B279D7000B6F5A0 /* Frameworks */,
+				8EB6C8581B279D7000B6F5A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EB6C85C1B279D7000B6F5A0 /* PBXTargetDependency */,
+			);
+			name = Cherry2UITests;
+			productName = Cherry2UITests;
+			productReference = 8EB6C85A1B279D7000B6F5A0 /* Cherry2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		8EB6C8621B279D7000B6F5A0 /* Cherry2 WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EB6C88C1B279D7100B6F5A0 /* Build configuration list for PBXNativeTarget "Cherry2 WatchKit App" */;
+			buildPhases = (
+				8EB6C8611B279D7000B6F5A0 /* Resources */,
+				8EB6C88B1B279D7100B6F5A0 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EB6C8751B279D7100B6F5A0 /* PBXTargetDependency */,
+			);
+			name = "Cherry2 WatchKit App";
+			productName = "Cherry2 WatchKit App";
+			productReference = 8EB6C8631B279D7000B6F5A0 /* Cherry2 WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8EB6C8711B279D7100B6F5A0 /* Cherry2 WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EB6C8881B279D7100B6F5A0 /* Build configuration list for PBXNativeTarget "Cherry2 WatchKit Extension" */;
+			buildPhases = (
+				8EB6C86E1B279D7100B6F5A0 /* Sources */,
+				8EB6C86F1B279D7100B6F5A0 /* Frameworks */,
+				8EB6C8701B279D7100B6F5A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cherry2 WatchKit Extension";
+			productName = "Cherry2 WatchKit Extension";
+			productReference = 8EB6C8721B279D7100B6F5A0 /* Cherry2 WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8EB6C8331B279D7000B6F5A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Kenny Tang";
+				TargetAttributes = {
+					8EB6C83A1B279D7000B6F5A0 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					8EB6C84E1B279D7000B6F5A0 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 8EB6C83A1B279D7000B6F5A0;
+					};
+					8EB6C8591B279D7000B6F5A0 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 8EB6C83A1B279D7000B6F5A0;
+					};
+					8EB6C8621B279D7000B6F5A0 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					8EB6C8711B279D7100B6F5A0 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 8EB6C8361B279D7000B6F5A0 /* Build configuration list for PBXProject "Cherry2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8EB6C8321B279D7000B6F5A0;
+			productRefGroup = 8EB6C83C1B279D7000B6F5A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8EB6C83A1B279D7000B6F5A0 /* Cherry2 */,
+				8EB6C84E1B279D7000B6F5A0 /* Cherry2Tests */,
+				8EB6C8591B279D7000B6F5A0 /* Cherry2UITests */,
+				8EB6C8621B279D7000B6F5A0 /* Cherry2 WatchKit App */,
+				8EB6C8711B279D7100B6F5A0 /* Cherry2 WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8EB6C8391B279D7000B6F5A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EB6C8491B279D7000B6F5A0 /* LaunchScreen.storyboard in Resources */,
+				8EB6C8461B279D7000B6F5A0 /* Assets.xcassets in Resources */,
+				8EB6C8441B279D7000B6F5A0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB6C84D1B279D7000B6F5A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB6C8581B279D7000B6F5A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB6C8611B279D7000B6F5A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EB6C86C1B279D7000B6F5A0 /* Assets.xcassets in Resources */,
+				8EB6C86A1B279D7000B6F5A0 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB6C8701B279D7100B6F5A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EB6C8841B279D7100B6F5A0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8EB6C8371B279D7000B6F5A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EB6C8411B279D7000B6F5A0 /* ViewController.swift in Sources */,
+				8EB6C83F1B279D7000B6F5A0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB6C84B1B279D7000B6F5A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EB6C8541B279D7000B6F5A0 /* Cherry2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB6C8561B279D7000B6F5A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EB6C85F1B279D7000B6F5A0 /* Cherry2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EB6C86E1B279D7100B6F5A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E4A5E581B28BF890018DF7E /* CHCategoryModel.swift in Sources */,
+				8EB6C8CE1B27B40600B6F5A0 /* CWEMainInterfaceController.swift in Sources */,
+				8EB6C87C1B279D7100B6F5A0 /* CWEExtensionDelegate.swift in Sources */,
+				8EB6C8CB1B27AD0100B6F5A0 /* CWEActivitiesCategoryPickerHelper.swift in Sources */,
+				8EB6C89E1B27A6A700B6F5A0 /* CWENotificationController.swift in Sources */,
+				8EB6C8A51B27AA9000B6F5A0 /* Cherry2.xcdatamodeld in Sources */,
+				8EB6C8A01B27A6F700B6F5A0 /* CWEGlanceInterfaceController.swift in Sources */,
+				8E4A5E5A1B28E72A0018DF7E /* CHActivityModel.swift in Sources */,
+				8EB6C8A21B27A72900B6F5A0 /* CWEComplicationController.swift in Sources */,
+				8EB6C8C81B27AB1E00B6F5A0 /* CHCCoreDataStack.swift in Sources */,
+				8EB6C8D01B27B44C00B6F5A0 /* CWEMainInterfaceRowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8EB6C8511B279D7000B6F5A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EB6C83A1B279D7000B6F5A0 /* Cherry2 */;
+			targetProxy = 8EB6C8501B279D7000B6F5A0 /* PBXContainerItemProxy */;
+		};
+		8EB6C85C1B279D7000B6F5A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EB6C83A1B279D7000B6F5A0 /* Cherry2 */;
+			targetProxy = 8EB6C85B1B279D7000B6F5A0 /* PBXContainerItemProxy */;
+		};
+		8EB6C8661B279D7000B6F5A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EB6C8621B279D7000B6F5A0 /* Cherry2 WatchKit App */;
+			targetProxy = 8EB6C8651B279D7000B6F5A0 /* PBXContainerItemProxy */;
+		};
+		8EB6C8751B279D7100B6F5A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EB6C8711B279D7100B6F5A0 /* Cherry2 WatchKit Extension */;
+			targetProxy = 8EB6C8741B279D7100B6F5A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8EB6C8421B279D7000B6F5A0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EB6C8431B279D7000B6F5A0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8EB6C8471B279D7000B6F5A0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EB6C8481B279D7000B6F5A0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8EB6C8681B279D7000B6F5A0 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EB6C8691B279D7000B6F5A0 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8EB6C8861B279D7100B6F5A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8EB6C8871B279D7100B6F5A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8EB6C8891B279D7100B6F5A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Cherry2 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.corgitoergosum.net.Cherry2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		8EB6C88A1B279D7100B6F5A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Cherry2 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.corgitoergosum.net.Cherry2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		8EB6C88D1B279D7100B6F5A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Cherry2_WatchKit_Extension;
+				INFOPLIST_FILE = "Cherry2 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.corgitoergosum.net.Cherry2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		8EB6C88E1B279D7100B6F5A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Cherry2_WatchKit_Extension;
+				INFOPLIST_FILE = "Cherry2 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.corgitoergosum.net.Cherry2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		8EB6C8911B279D7100B6F5A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cherry2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.corgitoergosum.net.Cherry2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8EB6C8921B279D7100B6F5A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cherry2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.corgitoergosum.net.Cherry2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8EB6C8941B279D7100B6F5A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Cherry2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.corgitoergosum.net.Cherry2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cherry2.app/Cherry2";
+			};
+			name = Debug;
+		};
+		8EB6C8951B279D7100B6F5A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Cherry2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.corgitoergosum.net.Cherry2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cherry2.app/Cherry2";
+			};
+			name = Release;
+		};
+		8EB6C8971B279D7100B6F5A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Cherry2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.corgitoergosum.net.Cherry2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cherry2;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8EB6C8981B279D7100B6F5A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Cherry2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.corgitoergosum.net.Cherry2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cherry2;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8EB6C8361B279D7000B6F5A0 /* Build configuration list for PBXProject "Cherry2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EB6C8861B279D7100B6F5A0 /* Debug */,
+				8EB6C8871B279D7100B6F5A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EB6C8881B279D7100B6F5A0 /* Build configuration list for PBXNativeTarget "Cherry2 WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EB6C8891B279D7100B6F5A0 /* Debug */,
+				8EB6C88A1B279D7100B6F5A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EB6C88C1B279D7100B6F5A0 /* Build configuration list for PBXNativeTarget "Cherry2 WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EB6C88D1B279D7100B6F5A0 /* Debug */,
+				8EB6C88E1B279D7100B6F5A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EB6C8901B279D7100B6F5A0 /* Build configuration list for PBXNativeTarget "Cherry2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EB6C8911B279D7100B6F5A0 /* Debug */,
+				8EB6C8921B279D7100B6F5A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EB6C8931B279D7100B6F5A0 /* Build configuration list for PBXNativeTarget "Cherry2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EB6C8941B279D7100B6F5A0 /* Debug */,
+				8EB6C8951B279D7100B6F5A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EB6C8961B279D7100B6F5A0 /* Build configuration list for PBXNativeTarget "Cherry2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EB6C8971B279D7100B6F5A0 /* Debug */,
+				8EB6C8981B279D7100B6F5A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8EB6C8A31B27AA9000B6F5A0 /* Cherry2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8EB6C8A41B27AA9000B6F5A0 /* Cherry2.xcdatamodel */,
+			);
+			currentVersion = 8EB6C8A41B27AA9000B6F5A0 /* Cherry2.xcdatamodel */;
+			name = Cherry2.xcdatamodeld;
+			path = Model/Cherry2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8EB6C8331B279D7000B6F5A0 /* Project object */;
+}

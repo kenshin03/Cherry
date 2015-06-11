@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8118.17" systemVersion="14E26a" minimumToolsVersion="Xcode 7.0">
+    <entity name="CHActivityModel" representedClassName="CHActivityModel" syncable="YES">
+        <attribute name="activityID" attributeType="String" syncable="YES"/>
+        <attribute name="actualPomos" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="categoryID" attributeType="String" syncable="YES"/>
+        <attribute name="createdTime" attributeType="Date" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="plannedPomos" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="CHCategoryModel" representedClassName="CHCategoryModel" syncable="YES">
+        <attribute name="categoryID" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CHActivityModel" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="CHCategoryModel" positionX="-54" positionY="18" width="128" height="75"/>
+    </elements>
+</model>
